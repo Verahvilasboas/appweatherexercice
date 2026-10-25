@@ -17,15 +17,14 @@ return(
 </ul>
 
 <div className="row">
-<div>"col-6"
+<div className=" col-6">
+
 <img src="https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_light.svg" alt="icon cloudy" />
 
 6°C°F
 
-
 </div>
-<div className=" col-6" >
-
+<div className=" col-6">
 
 <ul> 
 <li> precipitation
@@ -43,6 +42,7 @@ wind
 </div>
 </div>
 </div> );
+
 
 }
 
