@@ -1,18 +1,23 @@
 h1{
 color: rgb(38, 36, 36);
 text-align: left;
+
 } 
 
 .App {
   max-width: 800px;
   margin: 30px auto;  
   background-color: rgb(255, 255, 255);
+
 }
 
 
 .App footer {
   font-size: 12px;
   margin: 16px 16px;
+background-color: #f0f8ff24;
+border-radius: 16px;
+
 }
 
 .container {
@@ -21,6 +26,6 @@ text-align: left;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   background-color: rgb(255, 255, 255);
-border-radius: 16px;
+corner-border-radius: 16px ;
 
 }
