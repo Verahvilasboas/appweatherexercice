@@ -1,0 +1,57 @@
+
+.Weather {
+  font-family: arial, sans-serif;
+  border: 1px solid #dadde1;
+  padding: 16px;
+  border-radius: 4px;
+  color: rgb(56, 56, 56);
+background-color: rgb(255, 255, 255);
+}
+
+.Weather h1 {
+  font-size: 38px;
+  color: rgb(29, 27, 27);
+  margin: 20px 0 0 0;
+  line-height: 29px;
+text-align: left;
+color: rgb(42, 42, 42);
+}
+
+.Weather ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: rgb(54, 53, 53);
+  font-size: 20px;
+}
+
+.Weather li {
+padding: 16 px;
+text-align: left;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
+}
+.Weather canvas {
+  margin: 16px auto;
+}
+
+header {
+  background-image: linear-gradient(rgba(70, 120, 200, 0.55), rgba(150, 190, 240, 0.35)),
+  url("https://t3.ftcdn.net/jpg/04/10/26/40/360_F_410264043_gXK6Ds8eJUOlSdD3Lp97BgIEOKxkXCl3.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 40px;
+corner-radius: 16px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+body {
+ background-image: url("https://i.pinimg.com/originals/28/cb/55/28cb55069f8b8911fe8ba8048b933028.gif");
+  background-repeat: no-repeat;
+    background-size: cover;
+ font-family:'Roboto', sans-serif;
+ 
+}
