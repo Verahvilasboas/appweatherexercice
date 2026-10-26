@@ -4,10 +4,10 @@ import axios from 'axios';
 
 export default function Weather(){
 
-const [ready, setReady]= useState(false);
 
 
-const [weatherData, setWeatherData]= useState ({});
+
+const [weatherData, setWeatherData]= useState ({ready: false });
 
 function handleResponse(response)
 {
@@ -16,8 +16,10 @@ console.log(response.data);
 
 
 setWeatherData ({
+ready: true,
  temperature: response.data.main.temp,
 humidity: response.data.main.humidity,
+date: "wednesday 07:00",
 description: response.data.weather [0]. description,
 wind: response.data.main.speed,
 
@@ -27,13 +29,12 @@ city : response.data.name,
 
 });
 
-setReady(true);
 
 }
 
 
 
-if (ready) {
+if (weatherData.ready) {
 
 
 
@@ -52,23 +53,18 @@ return(
   </div>
   </div>
   </form>
+
 <br></br>
-<div className="row">
+  <h1> {weatherData.city} </h1> 
+
+<ul> 
+  <li className="text-capitalize"> {weatherData.date }</li>
+
+  <li className="text-capitalize"> {weatherData.description} </li>
+</ul>
+<div className="row mt-3">
 <div className="col-6"> 
 <div className="clearfix">
-
-  <h1> {weatherData.city} </h1> 
-  
-<div className="col-6"> 
-<ul> 
-  <li> Wednesday 07:00
-  </li>
-
-  <li> {weatherData.description} 
-  </li>
-
-</ul>
-
 
   <img src="https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_light.svg" alt="icon cloudy" className="float-left" />
 
@@ -81,7 +77,7 @@ return(
 </span>
 
 </div>
-</div> 
+
 
 </div>
 

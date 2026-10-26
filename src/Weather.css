@@ -21,14 +21,6 @@ color: rgb(42, 42, 42);
   list-style: none;
 }
 
-.Weather li {
-padding: 24 px;
-text-align: left;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
-  list-style: none;
-}
 .Weather canvas {
   margin: 16px auto;
 }
