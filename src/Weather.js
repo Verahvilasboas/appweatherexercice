@@ -11,11 +11,18 @@ const [weatherData, setWeatherData]= useState ({});
 
 function handleResponse(response)
 {
- console.log(response.data);
+
+console.log(response.data);
+
+
+
 setWeatherData ({
  temperature: response.data.main.temp,
-wind = 12,
-city = 
+humidity: response.data.main.humidity,
+wind: response.data.main.speed,
+
+
+city : response.data.name,
 
 
 });
@@ -23,7 +30,6 @@ city =
 setReady(true);
 
 }
-
 
 
 
@@ -56,7 +62,8 @@ return(
   </li>
 
   </ul>
-
+<div className="row" >
+<div className="col-6"> 
 <div className="clearfix">
 
   <img src="https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_light.svg" alt="icon cloudy" className="float-left" />
@@ -73,23 +80,25 @@ return(
 </span>
 
 </div>
+</div> 
 
 
+</div>
 
  </div>
   </div>
   <div className=" col-6">
 
   <ul> 
-  <li> precipitation
+  <li> precipitation: 15%
   </li>
 
   <li> 
-  humidity
+  humidity {weatherData.humidity} %
   </li>
 
   <li> 
-  wind {wind}
+  wind  {weatherData.wind} km/h
   </li>
 
   </ul>
@@ -100,10 +109,11 @@ return(
 
 else {
 
+let city = "Braga";
 
-const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-let city = " Lisbon "
-let ApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
 
 return "Loading...";
 
