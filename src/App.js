@@ -23,7 +23,7 @@ export default function App() {
           </a>{" "}
           and is{" "}
           <a
-            href="https://github.com/Verahvilasboas/weatherapp-oct26"
+            href="https://github.com/Verahvilasboas/appweatherexercice"
             target="_blank"
             rel="noopener noreferrer"
           >
