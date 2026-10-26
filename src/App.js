@@ -19,7 +19,7 @@ export default function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-          Vera Vilas
+          Vera Vilas Boas
           </a>{" "}
           and is{" "}
           <a
