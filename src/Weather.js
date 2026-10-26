@@ -15,10 +15,10 @@ function handleResponse(response)
 console.log(response.data);
 
 
-
 setWeatherData ({
  temperature: response.data.main.temp,
 humidity: response.data.main.humidity,
+description: response.data.weather [0]. description,
 wind: response.data.main.speed,
 
 
@@ -52,43 +52,42 @@ return(
   </div>
   </div>
   </form>
+<br></br>
+<div className="row">
+<div className="col-6"> 
+<div className="clearfix">
 
   <h1> {weatherData.city} </h1> 
-  <ul> 
+  
+<div className="col-6"> 
+<ul> 
   <li> Wednesday 07:00
   </li>
 
-  <li> {weatherData.description}
+  <li> {weatherData.description} 
   </li>
 
-  </ul>
-<div className="row" >
-<div className="col-6"> 
-<div className="clearfix">
+</ul>
+
 
   <img src="https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_light.svg" alt="icon cloudy" className="float-left" />
 
 <div className="float-left">
 <span className="temperature"> 
 {Math.round(weatherData.temperature)}
-
 </span>
 
 <span className="unit">  c 
-
-
 </span>
 
 </div>
 </div> 
 
-
 </div>
 
  </div>
   </div>
-  <div className=" col-6">
-
+  <div className="col-6">
   <ul> 
   <li> precipitation: 15%
   </li>
@@ -102,7 +101,7 @@ return(
   </li>
 
   </ul>
-  </div>
+  </div> </div>
 </div>
  );
 }

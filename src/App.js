@@ -31,7 +31,7 @@ export default function App() {
           </a>{" "}
           and{" "}
           <a
-            href="https://suspicious-beaver-111c4d.netlify.com/"
+            href="https://6adf76311eb5db1c77753f5e--diconium.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
