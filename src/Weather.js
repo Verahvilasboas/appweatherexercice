@@ -20,11 +20,9 @@ ready: true,
  temperature: response.data.main.temp,
 humidity: response.data.main.humidity,
 date: "wednesday 07:00",
-description: response.data.weather [0]. description,
-wind: response.data.main.speed,
+description: response.data.weather[0].description,
+iconUrl: "https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg"
 
-
-city : response.data.name,
 
 
 });
@@ -66,7 +64,7 @@ return(
 <div className="col-6"> 
 <div className="clearfix">
 
-  <img src="https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_light.svg" alt="icon cloudy" className="float-left" />
+  <img className="text-capitalize" src={weatherData.icon} alt={weatherData.description} className="float-left" />
 
 <div className="float-left">
 <span className="temperature"> 
