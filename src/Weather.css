@@ -22,7 +22,7 @@ background-color: rgba(255, 255, 255, 0.329);
 .Weather li {
   font-size: 16px;
   font-weight: 100;
-  line-height: 19px;
+  line-height: 24px;
   list-style: none;
 }
 
@@ -31,9 +31,9 @@ background-color: rgba(255, 255, 255, 0.329);
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 64px;
-  margin-left: 5px;
+  margin-left: 8px;
   font-weight: 400;
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .Weather canvas {
@@ -54,8 +54,6 @@ header {
   url("https://t3.ftcdn.net/jpg/04/10/26/40/360_F_410264043_gXK6Ds8eJUOlSdD3Lp97BgIEOKxkXCl3.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 40px;
-  text-align: center;
   color: rgba(255, 255, 255, 0.662);
   border-radius: 16px;
 }
@@ -63,8 +61,7 @@ header {
 body {
  background-image: url("https://i.pinimg.com/originals/28/cb/55/28cb55069f8b8911fe8ba8048b933028.gif");
   background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
  font-family:'Roboto', sans-serif;
-  border-radius: 16px;
 
 }
