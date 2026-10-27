@@ -39,7 +39,6 @@ export default function App() {
           <a
             href="https://github.com/Verahvilasboas/appweatherexercice/tree/main/src"
             target="_blank"
-            rel="noopener noreferrer"
           >
             hosted on Netlify
           </a>
