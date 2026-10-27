@@ -37,7 +37,7 @@ export default function App() {
 
           and{" "}
           <a
-            href="https://6adf76311eb5db1c77753f5e--diconium.netlify.app/"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
           >
