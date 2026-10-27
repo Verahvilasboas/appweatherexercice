@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import "./Weather.css"
 import axios from 'axios';
-
+import FormattedDate from "./FormattedDate"
 export default function Weather(){
 
 
@@ -19,7 +19,7 @@ setWeatherData ({
 ready: true,
  temperature: response.data.main.temp,
 humidity: response.data.main.humidity,
-date: "wednesday 07:00",
+date: new Date(response.data.dt * 1000),
 description: response.data.weather[0].description,
 iconUrl: "https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg"
 
@@ -56,7 +56,8 @@ return(
   <h1> {weatherData.city} </h1> 
 
 <ul> 
-  <li className="text-capitalize"> {weatherData.date }</li>
+ <li> <FormattedDate date={weatherData.date}/> 
+</li>
 
   <li className="text-capitalize"> {weatherData.description} </li>
 </ul>
@@ -64,7 +65,7 @@ return(
 <div className="col-6"> 
 <div className="clearfix">
 
-  <img className="text-capitalize" src={weatherData.icon} alt={weatherData.description} className="float-left" />
+  <img className="text-capitalize" src={weatherData.icon} alt={weatherData.description} />
 
 <div className="float-left">
 <span className="temperature"> 
