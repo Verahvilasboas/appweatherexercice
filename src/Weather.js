@@ -2,6 +2,9 @@ import React, {useState} from "react"
 import "./Weather.css"
 import axios from 'axios';
 import FormattedDate from "./FormattedDate"
+import WeatherInfo from "./WeatherInfo";
+
+
 export default function Weather(){
 
 
@@ -34,11 +37,12 @@ iconUrl: "https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg"
 if (weatherData.ready) {
 
 
-
 return(
 <div>
   <div className="Weather"> 
+<WeatherInfo />
   <form> 
+
   <div className="row"> 
   <div className=" col-9">
   <input 
