@@ -24,8 +24,6 @@ date: new Date(response.data.dt * 1000),
 description: response.data.weather[0].description,
 iconUrl: "https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg"
 
-
-
 });
 
 
