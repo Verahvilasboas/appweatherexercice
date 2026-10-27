@@ -32,16 +32,6 @@ export default function App() {
   target="_blank"
 >open source github </a>
 
-
-{" "}
-
-          and{" "}
-          <a
-            href="https://github.com/Verahvilasboas/appweatherexercice/tree/main/src"
-            target="_blank"
-          >
-            hosted on Netlify
-          </a>
         </footer>
 
       </div>
