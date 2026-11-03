@@ -10,6 +10,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+console.log(response);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -21,6 +22,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
     });
+
   }
 
   function handleSubmit(event) {
