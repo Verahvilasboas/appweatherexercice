@@ -30,12 +30,16 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
 
-<div className="col">  <WeatherForecastDay data={forecast[8]} /> 
+<div className="col"> 
+ <WeatherForecastDay data={forecast[8]} /> 
 </div>
-<div className="col">  <WeatherForecastDay data={forecast[16]} />     
+<div className="col">  
+<WeatherForecastDay data={forecast[16]} />     
 </div>
-<div className="col">  <WeatherForecastDay data={forecast[24]} />     
-</div><div className="col">  <WeatherForecastDay data={forecast[32]} />     
+<div className="col">  
+<WeatherForecastDay data={forecast[24]} />     
+</div><div className="col">  
+<WeatherForecastDay data={forecast[32]} />     
 </div>
    </div> 
 </div> 
