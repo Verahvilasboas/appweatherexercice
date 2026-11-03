@@ -16,21 +16,8 @@ export default function App() {
  </header>   
 
         <footer>
-          This project was coded by{" "}
-          <a
-            href="https://www.behance.net/veravilasboas2/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          Vera Vilas Boas
-          </a>{" "}
-          and is{" "}
-    
- 
-  <a
-  href="https://github.com/Verahvilasboas/appweatherexercice"
-  target="_blank"
->open source github </a>
+          This project was coded by vera
+
 
         </footer>
 
