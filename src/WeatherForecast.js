@@ -12,15 +12,15 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    setForecast(response.data.daily);
+    setForecast(response.data.list);
     setLoaded(true);
   }
 
   function load() {
-    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiKey ="3a6dd00c3d638a73ad7a18d35074fbe8";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
   }
@@ -29,21 +29,20 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          {forecast.map(function (dailyForecast, index) {
-            if (index < 5) {
-              return (
-                <div className="col" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
-        </div>
-      </div>
-    );
-  } else {
+
+<div className="col">  <WeatherForecastDay data={forecast[8]} /> 
+</div>
+<div className="col">  <WeatherForecastDay data={forecast[16]} />     
+</div>
+<div className="col">  <WeatherForecastDay data={forecast[24]} />     
+</div><div className="col">  <WeatherForecastDay data={forecast[32]} />     
+</div>
+   </div> 
+</div> 
+      
+  
+  );
+} else {
     load();
 
     return null;
