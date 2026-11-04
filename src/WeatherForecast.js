@@ -12,9 +12,32 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    setForecast(response.data.list);
+      let list = response.data.list;
+    let middays = list.filter((item) => item.dt_txt.includes("12:00:00"));
+
+    let days = middays.map(function (midday) {
+      let date = midday.dt_txt.split(" ")[0];
+      let sameDay = list.filter((item) => item.dt_txt.startsWith(date));
+
+      return {
+        ...midday,
+        main: {
+          ...midday.main,
+          temp_max: Math.max(...sameDay.map((item) => item.main.temp_max)),
+          temp_min: Math.min(...sameDay.map((item) => item.main.temp_min)),
+        },
+      };
+    });
+
+    setForecast(days);
     setLoaded(true);
   }
+
+
+
+
+
+
 
   function load() {
     let apiKey ="3a6dd00c3d638a73ad7a18d35074fbe8";
@@ -31,15 +54,15 @@ export default function WeatherForecast(props) {
         <div className="row">
 
 <div className="col"> 
- <WeatherForecastDay data={forecast[1]} /> 
+ <WeatherForecastDay data={forecast[0]} /> 
+</div>
+<div className="col">  
+<WeatherForecastDay data={forecast[1]} />     
 </div>
 <div className="col">  
 <WeatherForecastDay data={forecast[2]} />     
-</div>
-<div className="col">  
-<WeatherForecastDay data={forecast[3]} />     
 </div><div className="col">  
-<WeatherForecastDay data={forecast[4]} />     
+<WeatherForecastDay data={forecast[3]} />     
 </div>
    </div> 
 </div> 
