@@ -12,6 +12,7 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
+console.log(response.data.list);
       let list = response.data.list;
     let middays = list.filter((item) => item.dt_txt.includes("12:00:00"));
 
@@ -32,8 +33,6 @@ export default function WeatherForecast(props) {
     setForecast(days);
     setLoaded(true);
   }
-
-
 
 
 
@@ -65,6 +64,7 @@ export default function WeatherForecast(props) {
 <div className="col">  
 <WeatherForecastDay data={forecast[4]} />     
 </div>
+
    </div> 
 </div> 
       
